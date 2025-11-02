@@ -7,7 +7,7 @@ trigger:
 - main
 
 pool:
-  name: hugoxz
+  name: hugotest1
   vmImage: ubuntu-latest
 
 steps:

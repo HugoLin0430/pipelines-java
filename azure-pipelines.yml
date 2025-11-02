@@ -7,9 +7,13 @@ trigger:
 - main
 
 pool:
-  vmImage: ubuntu-latest
+  name: PoolTest1   # <-- This must match your agent pool name exactly
 
 steps:
+# Optional test step to confirm which agent is running
+- script: echo "Running on self-hosted agent $(Agent.Name)"
+  displayName: 'Verify agent name'
+
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'
